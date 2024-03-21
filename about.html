@@ -3,23 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>>_moqbit</title>
-  <link rel="icon" href="moqbit.png" type="image/png">
+  <title>>_moqbit [about]</title>
+  <link rel="icon" href="data/moqbit.png" type="image/png">
   <meta property="og:title" content=">_moqbit">
   <meta property="og:description" content=">_moqbit adalah entitas nirlaba demi dunia pendidikan yang mana berfokus pada teknologi">
-  <meta property="og:image" content="moqbit.png">
+  <meta property="og:image" content="data/moqbit.png">
   <meta property="og:url" content="https://moqbit.github.io">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       document.querySelector('.fixed-bottom').classList.add('show');
     });
+	function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
   </script>
+  
 <style>
   body {
     background: linear-gradient(to right, #f5fffd, #fcfcfc);
@@ -27,14 +34,14 @@
     font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
-    font-size: 14px; 
+   
   }
 
   .navbar, .navbar1 {
     margin-bottom: 10px;
     border-radius: 15px;
     padding: 10px;
-    transition: bottom 0.5s ease-in-out; 
+
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -48,7 +55,7 @@
     position: fixed;
     bottom: -200px;
     width: calc(100% - 2rem);
-    transition: bottom 0.5s ease-in-out;
+
     padding: 10px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -90,48 +97,128 @@
       margin-bottom: 10px;
     }
   }
+  .app-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.text-justify {
+  text-align: justify;
+}
+
 </style>
+
+
+
+
 
 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar1">
-<a class="navbar-brand" href="index.html" style="color: #66ccff;">
-
+<a class="navbar-brand" href="" style="color: #66ccff;">
   >_moqbit
 </a>
 
-<a href="#" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none; outline: none;">
+<a href="#" class="navbar-toggler collapsed" data-toggle="collapse" aria-label="Toggle navigation" style="border: none; outline: none;" onclick="openNav()">
   <img src="data/menu.png" width="30" height="30" alt="Toggle navigation" style="border: none;">
 </a>
 
   <div class="collapse navbar-collapse" id="navbarNav" >
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item " >
-        <a class="nav-link" href="index.html" >home</a>
-      </li>
+      
       <li class="nav-item">
-        <a class="nav-link" href="about.html" style="color: #66ccff;">tentang_< <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html">home</a>
       </li>
-    
+	
+   <li class="nav-item active" >
+        <a class="nav-link" href="about.html"  style="color: #66ccff;">tentang_< <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="mailto:moqbit@gmail.com">kontak</a>
       </li>
     </ul>
   </div>
 </nav>
+
+<div class="container">
+
+
+
+<div class="text-container" style="text-align: center; padding: 8px;">
+
+  
+<div class="app-container">
 <div class="container">
  <p style="font-size: 8px; text-align: justify;">
-    adalah entitas pengembang sesuatu demi sesuatu, suatu entitas independen yang diciptakan oleh sesuatu, yang berada di Muara Teweh, Kalimantan, memiliki hati yang rapuh jika tidak ditangani dengan hati-hati, memiliki tujuan untuk meningkatkan pendidikan melalui berbagai cara seperti buku, permainan, dan lainnya, sesuai dengan minat dan umpan balik dari para pembelajar, hanya mengandalkan sumbangan yang ada untuk kelangsungannya, berharap dapat membuat perubahan untuk generasi mendatang, demi masa depan yang lebih baik.
+moqbit adalah entitas pengembang sesuatu demi sesuatu, suatu entitas independen yang diciptakan oleh sesuatu, yang berada di Muara Teweh, Kalimantan, Indonesia.
+
+Dengan visi PANCASILA dan misi Bhinneka Tunggal Ika.
+
+Berupaya meningkatkan pendidikan melalui berbagai cara seperti buku, permainan, dan lainnya, sesuai dengan minat dan umpan balik dari para pembelajar, hanya mengandalkan sumbangan dan belas kasihan yang ada untuk kelangsungannya, dengan harapan dapat membuat masa depan menjadi lebih baik lagi.
 </p>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2703347988236!2d114.898232242177!3d-0.9496216165327084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df9773cff3ab8a9%3A0xb7521ff671d6aa20!2smoqbit!5e0!3m2!1sen!2sid!4v1704961378100!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div> 
 
-<br>
+</div>
+
+</div>
 
 
+
+</div>
+<div id="mySidenav" class="sidenav" >
+
+  <a href="index.html" style="font-size: 14px; ">beranda</a>
+
+  <a style="font-size: 14px; color: #54c5d6;" >tentang_&lt;</a>
+
+  <a style="font-size: 14px;"  href="mailto:moqbit@gmail.com">kontak</a>
+  <br>
+   <a style="font-size: 34px; color: #fa7fb7;" href="javascript:void(0)" onclick="closeNav() ">&times;</a>
+</div>
 
 <footer class="d-flex justify-content-between fixed-bottom">
     <div>
@@ -143,19 +230,19 @@
 
 <ul>
  
+
     <a class="text-muted" href="https://fb.com/moqbit">
    
-      <img src="data/fb.png" width="24" height="24" class="d-inline-block align-top" alt="">
+      <img src="data/fb.png" width="24" height="24" class="d-inline-block align-top">
     </a>
   
     <a class="text-muted" href="https://instagram.com/moqbit">
    
-      <img src="data/ig.png" width="24" height="24" class="d-inline-block align-top" alt="">
+      <img src="data/ig.png" width="22" height="22"  class="d-inline-block align-top" >
     </a>
  
 </ul>
 
   </footer>
-
 </body>
 </html>
