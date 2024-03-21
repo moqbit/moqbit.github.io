@@ -95,32 +95,89 @@
   justify-content: space-between;
 }
 
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.text-justify {
+  text-align: justify;
+}
+
 </style>
 
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar1">
-<a class="navbar-brand" href="#" style="color: #66ccff;">
-
+<a class="navbar-brand" href="" style="color: #66ccff;">
   >_moqbit
 </a>
 
-<a href="#" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none; outline: none;">
+<a href="#" class="navbar-toggler collapsed" data-toggle="collapse" aria-label="Toggle navigation" style="border: none; outline: none;" onclick="openNav()">
   <img src="data/menu.png" width="30" height="30" alt="Toggle navigation" style="border: none;">
+  
 </a>
 
   <div class="collapse navbar-collapse" id="navbarNav" >
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active" >
-        <a class="nav-link" href="index.html" style="color: #66ccff;">Home_< <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.html" style="color: #66ccff;">home_< <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about.html">Tentang</a>
+        <a class="nav-link" href="about.html">tentang</a>
       </li>
    
       <li class="nav-item">
-        <a class="nav-link" href="mailto:moqbit@gmail.com">Kontak</a>
+        <a class="nav-link" href="mailto:moqbit@gmail.com">ontak</a>
       </li>
     </ul>
   </div>
@@ -169,9 +226,17 @@
 
 
 </div>
+<div id="mySidenav" class="sidenav" >
 
+  <a href="#" style="font-size: 14px; color: #54c5d6;">beranda_&lt;</a>
 
-<footer class="d-flex justify-content-between fixed-bottom"">
+  <a style="font-size: 14px;" href="about.html">tentang</a>
+  <a style="font-size: 14px;"  href="mailto:moqbit@gmail.com">kontak</a>
+  <br>
+   <a style="font-size: 34px; color: #fa7fb7;" href="javascript:void(0)" onclick="closeNav() ">&times;</a>
+</div>
+
+<footer class="d-flex justify-content-between fixed-bottom">
     <div>
      
     <span class="mb-3 mb-md-0 text-muted" style="font-size: 10px;">© 2024 moqbit</span>
