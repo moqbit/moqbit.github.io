@@ -1,4 +1,4 @@
-  body {
+body {
     background: linear-gradient(to right, #f5fffd, #fcfcfc);
     color: #95cade;
     font-family: 'Press Start 2P', cursive;
@@ -72,33 +72,46 @@
   justify-content: space-between;
 }
 
-		.anim {
-			animation: popUpAnimation 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
-			opacity: 0;
-			transform: translateY(20px);
-		}
 
-		@keyframes popUpAnimation {
-			0% {
-				opacity: 0;
-				transform: translateY(20px);
-			}
-			100% {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-		.grid-container {
-                      display: grid;
-                      grid-template-columns: 1fr 1fr;
-                      gap: 8px;
-                  }
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
 
-                  .left-side {
-                      text-align: center;
-                  }
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
-                  .right-side {
-                      text-align: center;
-                  }
-				  
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.text-justify {
+  text-align: justify;
+}
